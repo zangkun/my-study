@@ -1,0 +1,74 @@
+option = {
+    title: {
+        text: '敏捷项目速率图',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            //magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    tooltip : {
+        show: true,
+        trigger: 'item'
+    },
+    legend: {
+        left: 'left',
+        data: ['实际完成故事点', '计划完成故事点']
+    },
+    xAxis: {
+        type: 'category',
+        name: '迭代周期',
+        splitLine: {show: false},
+        data: ['Sprint1', 'Sprint2', 'Sprint3', 'Sprint4', 'Sprint5', 'Sprint6', 'Sprint7', 'Sprint8', 'Sprint9','Srint10']
+    },
+    yAxis: {
+        type: 'value',
+        name: '故事点数'
+    },
+    series: [
+        {
+            name: '计划完成故事点',
+            //type: 'line',
+            data: [30, 35, 40, 45, 40, 42, 40, 45, 30,20],
+            type:'bar',
+          	type:'line',
+            barWidth: 40,                   // 系列级个性化，柱形宽度
+            itemStyle: {
+                normal: { 
+                    label : {
+                        show : true,
+                        textStyle : {
+                            fontSize : '16',
+                            fontFamily : '微软雅黑'
+                        }
+                    }
+                }
+            },
+        },
+        {
+            name: '实际完成故事点',
+            //type: 'line',
+            data: [30, 35, 40, 38, 40, 40, 35, 40, 30,20],
+            //type:'bar',
+          	type:'line',
+            barWidth: 40,                   // 系列级个性化，柱形宽度
+            itemStyle: {
+                normal: { 
+                    label : {
+                        show : true,
+                        textStyle : {
+                            fontSize : '16',
+                            fontFamily : '微软雅黑'
+                        }
+                    }
+                }
+            },
+        }
+    ]
+};
