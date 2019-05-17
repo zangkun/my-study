@@ -1,10 +1,15 @@
 option = {
+     title: {
+        text: '敏捷耗散图',
+        left:'center'
+    },
     tooltip : {
         show: true,
         trigger: 'item'
     },
     legend: {
-        data:['剩余故事点']
+        data:['剩余故事点'],
+        left:'left'
     },
     toolbox: {
         show : true,
@@ -33,7 +38,8 @@ option = {
         {
             name:'剩余故事点',
             type:'line',
-            barWidth: 40,                   // 系列级个性化，柱形宽度
+            barWidth: 40,// 系列级个性化，柱形宽度
+            color:'green',
             itemStyle: {
                 normal: { 
                     label : {
