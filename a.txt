@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-abc
-d
-e
-=======
-abc
->>>>>>> parent of 04316b9... update d at a.txt
+测试
