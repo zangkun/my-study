@@ -1,0 +1,74 @@
+option = {
+    title: {
+        text: '敏捷耗散图',
+        left:'center'
+    },
+    legend: {
+        data:['计划故事点','编辑新功能故事点'],
+        left:'left'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            //magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    xAxis: {
+        name: '迭代周期',
+        data:['sprint0','sprint1','sprint2','sprint3','sprint4','sprint5','sprint6'],
+        silent: false,
+        axisLine: {onZero: true},
+        splitLine: {show: false},
+        splitArea: {show: false}
+    },
+    yAxis: {
+        name:'故事点',
+        value:'value',
+        //inverse:true
+    },
+    series: [
+        {
+            name: '计划故事点',
+            type: 'bar',
+            stack: 'one',
+            //position:'top',
+            color:'green',
+            itemStyle: {
+                normal: { 
+                    label : {
+                        position:'top',
+                        show : true,
+                        textStyle : {
+                            fontSize : '12',
+                            fontFamily : '微软雅黑'
+                        }
+                    }
+                }
+            },
+            data: [240,200,160,120,80,40,0]
+        },
+        {
+            name: '编辑新功能故事点',
+            type: 'bar',
+            stack: 'one',
+            color:'red',
+            itemStyle: {
+                normal: { 
+                    label : {
+                        position:'bottom',
+                        show : true,
+                        textStyle : {
+                            fontSize : '12',
+                            fontFamily : '微软雅黑'
+                        }
+                    }
+                }
+            },
+            data: [,-50,-60,-40,-20,,]
+        }
+    ]
+};
