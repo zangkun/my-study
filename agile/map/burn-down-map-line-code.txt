@@ -1,0 +1,58 @@
+option = {
+     title: {
+        text: '敏捷耗散图',
+        left:'center'
+    },
+    tooltip : {
+        show: true,
+        trigger: 'item'
+    },
+    legend: {
+        data:['剩余故事点'],
+        left:'left'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            //magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+          	boundaryGap: false,
+            data : ['Sprint0','Sprint1','Sprint2','Sprint3','Sprint4','Sprint5','Spring6','Sprint7','Sprint8','Sprint9','Sprint10']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'剩余故事点',
+            type:'line',
+            barWidth: 40,// 系列级个性化，柱形宽度
+            color:'green',
+            itemStyle: {
+                normal: { 
+                    label : {
+                        show : true,
+                        textStyle : {
+                            fontSize : '16',
+                            fontFamily : '微软雅黑'
+                        }
+                    }
+                }
+            },
+            data:[280, 265,  226,206,163, 115,70,40,30,25,0]
+        }
+    ]
+};
+                    
